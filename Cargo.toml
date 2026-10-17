@@ -1,0 +1,23 @@
+[package]
+name = "stelly-qobuz-client"
+description = "stelly-qobuz's gateway, from the other side: its wire types, and a client of it, async or blocking"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[features]
+# The wire types alone, by default: what the gateway itself shares.
+default = []
+# A client on reqwest, for async callers such as Stelly's server.
+async = ["dep:reqwest", "dep:rustls"]
+# A client on ureq, for blocking callers such as stelly-mix-qobuz.
+blocking = ["dep:ureq"]
+
+[dependencies]
+anyhow.workspace = true
+reqwest = { workspace = true, optional = true }
+rustls = { workspace = true, optional = true }
+serde.workspace = true
+serde_json.workspace = true
+ureq = { version = "3", features = ["json"], optional = true }

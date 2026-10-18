@@ -1,5 +1,9 @@
 # stelly-qobuz-client
 
+> **Archived.** Superseded by [stelly-provider](https://github.com/nab-os/stelly-provider),
+> the protocol every Stelly music provider answers, Qobuz's gateway included
+> since stelly-qobuz 0.2.0. Stelly 1.2 and later use that instead.
+
 The other side of stelly-qobuz, the gateway that holds a Qobuz account and
 its one request queue for Stelly, stelly-mix and anything else on the
 machine: its wire types, and a client of it.
